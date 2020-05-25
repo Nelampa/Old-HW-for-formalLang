@@ -7,6 +7,8 @@ stages:
 build-stage:
     script:
     - pip3 install requirements.txt
+    - pip3 install pylint
+    - pylint
     stage: build
 
 test-stage:
