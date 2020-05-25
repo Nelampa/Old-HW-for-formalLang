@@ -1,0 +1,18 @@
+image: python:latest
+
+stages:
+    - build
+    - test
+
+build-stage:
+    script:
+    - pip3 install requirements.txt
+    stage: build
+
+test-stage:
+  script:
+    - echo "running tests"
+    - pip3 install -r requirements.txt
+    - python3 tests.py
+  stage: test
+
